@@ -155,8 +155,9 @@ function DrawSticky()
     //ctx.strokeRect(Coord[i], Coord[i+1], 200,200);
     ctx.font = "20px Georgia";
     ctx.fillStyle = '#15181c';
-    //MNotes.pop();
-    ctx.fillText(MNotes.pop(), Coord[i]+130, Coord[i+1]+160);
+    MNotes.pop();
+    
+    ctx.fillText(MNotes.length()/4, Coord[i]+130, Coord[i+1]+160);
     let MNText = MNotes.pop();
   //if (mouseDown)
     //{
@@ -213,7 +214,7 @@ function loadform()
       target="hiddenFrame" id = "form">\
       <input type="text" name="entry.498945756" value="Name" id="name">\
       <input type="text" name="entry.1254765034" value="Text" id="text">\
-      <input type="text" name="entry.762508820" value="#" id="notenum">\
+      <input type="text" name="entry.762508820" value="#" id="notenum" style = "display:none;">\
       <input type="submit" value="Submit" onClick="getInputedValues()">\
     </form>'
 }
