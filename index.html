@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML5 Boilerplate</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body >
+    <div id = "_former">
+    <button onclick="loadform()">New Task</button>
+    <form
+      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSehw2OE7C_HlXgRb4kcx8AbcmcXB5SdL_WSO__CU-htnmCzSA/formResponse"
+      target="hiddenFrame" id = "form" style = "float:right;">
+      <input type="text" name="entry.498945756" value="Name" id="name">
+      <input type="text" name="entry.1254765034" value="Text" id="text" style="display:none;">
+      <input type="text" name="entry.762508820" value="Finished" id="notenum" style="display:none;">
+      <input type="submit" value="Finished" onClick="getInputedValues()">
+    </form>
+    </div> 
+
+  <div id="sheets"></div>
+  <canvas id="myCanvas" onmousemove="mouse_position(event)" onmouseclick="mouse_click(event)">
+    
+  </canvas>
+  <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+  
+
+  <!--<script src="index.js"></script>-->
+  <script src="./pullnote.js"></script>
+  <!--<script src="takenote.js"></script>-->
+</body>
+
+</html>
