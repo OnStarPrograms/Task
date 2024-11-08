@@ -119,6 +119,7 @@ function DrawSticky()
       if (MNotes[j] == MNotes[k-2] && MNotes[k] == "Finished"){
           console.log(MNotes[j]+": 2");
           MNotes.splice(j-1, 4);
+          MNotes.splice(k-3, 4);
           k = 0;
           j = 0;
       }
@@ -157,7 +158,7 @@ function DrawSticky()
     ctx.fillStyle = '#15181c';
     MNotes.pop();
     
-    ctx.fillText(MNotes.length()/4, Coord[i]+130, Coord[i+1]+160);
+    ctx.fillText(Math.floor(i/3)+1, Coord[i]+130, Coord[i+1]+160);
     let MNText = MNotes.pop();
   //if (mouseDown)
     //{
